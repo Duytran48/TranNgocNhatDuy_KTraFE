@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style>
+        html {
+            font-family: Inter, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        }
+
+        header {
+            font-size: 5px;
+            display: block;
+        }
+
+        #free_ship_extra {
+            display: flex;
+            background-color: #EFFFF4;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .webpimg-container img {
+            transform: translate(5px,3px)
+        }
+
+        #main_menu {
+            border-bottom: 1px solid rgb(221,221,228);
+            display: flex;
+            width: 100%;
+        }
+
+        #logo a {
+            text-decoration: none
+        }
+
+            #logo a span {
+                display: block;
+                transform: translate(25px,3px);
+                font-size: 16px;
+                font-family: Arial;
+                color: darkblue;
+            }
+
+        .middle_header {
+            display: block;
+            align-items: center;
+        }
+
+        #middle_header_top {
+            margin-left: 70px;
+            display: flex;
+            height: auto;
+            padding: 10px;
+            width: 500px;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+        }
+
+        #search_bar i {
+            height: 40px;
+            width: 40px;
+            display: block;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #search_bar form {
+            border: 1px solid rgb(221, 221, 227);
+            display: flex;
+            border-radius: 10px;
+        }
+
+        #search_box {
+            border: 0px;
+            padding: 0px 8px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 15px;
+            border-bottom-left-radius: 8px;
+            flex: 1 1 0%;
+            outline: none;
+            width: 700px;
+            color: gray;
+        }
+
+        .search_btn {
+            cursor: pointer;
+            border: 0px;
+            width: 100px;
+            height: 50px;
+            padding: 4px;
+            border-radius: 0px 8px 8px 0px;
+            background: transparent;
+            color: rgb(10, 104, 255);
+            font-weight: 40;
+            font-size: 14px;
+            outline: none;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid black;
+        }
+
+        .trangchu {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+            .trangchu div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        .account {
+            margin-left: 30px;
+            height: 30px;
+            width: 30px;
+        }
+
+        .trangchu span {
+            margin-left: 2px;
+        }
+
+        #shopping_cart {
+            width: 30px;
+            height: 30px;
+            position: relative;
+        }
+
+        #space {
+            position: absolute;
+            right: 10px;
+            width: 3px;
+            height: 20px;
+            margin-left: 3px;
+            background-color: rgb(221, 221, 227);
+        }
+
+        #sign_number {
+            position: relative;
+        }
+
+        #shopping_cart_icon {
+            position: relative;
+            position: absolute;
+            left: 10px;
+        }
+
+        #total {
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: -10px;
+            right: -13px;
+            border-radius: 50%;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .middle_header_bottom {
+            justify-content: space-between;
+            width: 101.9%;
+            margin-left: 75px;
+            display: flex;
+            position: relative;
+        }
+
+        .suggest_box {
+            display: flex;
+            align-items: center;
+            margin-right: 100px;
+        }
+
+        .suggest {
+            margin-left: 30px;
+            text-decoration: none;
+            color: gray;
+        }
+
+        .driver_zone {
+            display: flex;
+            align-items: center;
+        }
+
+            .driver_zone img {
+                height: 25px;
+                width: 25px;
+            }
+
+            .driver_zone div {
+                margin-right: 80px;
+                display: inline-block;
+                font-weight: 10
+            }
+
+        .camket {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgb(221, 221, 227);
+        }
+
+        #camket_sign {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .camket_1 {
+            font-size: 16px;
+            margin-left: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .text {
+            margin-left: 4px;
+        }
+
+        .camket_space {
+            font-size: 15px;
+            align-items: center;
+            display: flex;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="background-color:#EFFFF4" id="free_ship_extra">
+            <div style="color:#00AB56" class="styles__UniversalFreeShipPlusContentStyled-sc-xilry7-1 jNiPfT">Freeship đơn từ 45k, giảm nhiều hơn cùng</div>
+            <picture class="webpimg-container">
+                <img srcset="https://salt.tikicdn.com/ts/upload/a7/18/8c/910f3a83b017b7ced73e80c7ed4154b0.png" class="styles__StyledImg-sc-p9s3t3-0 hbqSye title-img" alt="icon" width="79" height="16" style="width:79px;height:16px;opacity:1">
+            </picture>
+        </div>
+
+        <div id="main_menu">
+            <div id="logo">
+                <a href="#">
+                    <img src="~/Content/img/tiki.png" />
+                    <span><strong>Tốt & Nhanh</strong></span>
+                </a>
+            </div>
+            <div class="middle_header">
+                <div id="middle_header_top">
+                    <div id="search_bar">
+                        <form id="">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="search_box" placeholder="FreeShip Từ đơn 45k" />
+                            <button class="search_btn">Tìm Kiếm</button>
+                        </form>
+                    </div>
+                    <div class="trangchu">
+                        <div>
+                            <a href="#"><img class="account" src="https://salt.tikicdn.com/ts/upload/b4/90/74/6baaecfa664314469ab50758e5ee46ca.png" alt="header_menu_item_home"></a>
+                            <span>Trang Chủ</span>
+                        </div>
+                        <div>
+                            <img class="account" src="https://salt.tikicdn.com/ts/upload/07/d5/94/d7b6a3bd7d57d37ef6e437aa0de4821b.png" alt="header_header_account_img">
+                            <span>Tài Khoản</span>
+                        </div>
+                        <div id="shopping_cart">
+                            <div id="space"></div>
+                            <div id="shopping_cart_icon">
+                                <img class="account" src="https://salt.tikicdn.com/ts/upload/51/e2/92/8ca7e2cc5ede8c09e34d1beb50267f4f.png" alt="header_header_img_Cart" />
+                                <span id="total" style="color:white">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle_header_bottom">
+                    <div class="suggest_box">
+                        <a href="#" class="suggest">Điện gia dụng</a>
+                        <a href="#" class="suggest">Xe cộ</a>
+                        <a href="#" class="suggest">Mẹ và bé</a>
+                        <a href="#" class="suggest">khỏe đẹp</a>
+                        <a href="#" class="suggest">Nhà cửa</a>
+                        <a href="#" class="suggest">Sách</a>
+                        <a href="#" class="suggest">thể thao</a>
+                        <a href="#" class="suggest">ensure</a>
+                        <a href="#" class="suggest">ensure gold</a>
+                        <a href="#" class="suggest">ensure nước</a>
+                        <a href="#" class="suggest">boost optimus</a>
+                    </div>
+                    <div class="driver_zone">
+                        <img src="https://salt.tikicdn.com/ts/upload/88/5c/9d/f5ee506836792eb7775e527ef8350a44.png" alt="header-icon-location">
+                        <h4 style="color:gray">Giao đến: </h4>
+                        <div class="address"><p><b><u>Q. 1, P. Bến Nghé, Hồ Chí Minh</u></b></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="camket">
+            <div id="camket_sign">
+                <h4 style="color:#2541b1">Cam kết</h4>
+                <div class="camket_1">
+                    <div class="camket_space">
+                        <img class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo title-img-0" src="https://salt.tikicdn.com/ts/upload/96/76/a3/16324a16c76ee4f507d5777608dab831.png" alt="icon-0" width="20" height="20" srcset="https://salt.tikicdn.com/ts/upload/96/76/a3/16324a16c76ee4f507d5777608dab831.png">
+                        <div class="text" style="color: gray; font-size: 15px; font-weight: 50; white-space: nowrap">100% hàng thật</div>
+
+                    </div>
+                </div>
+                <div class="camket_1">
+                    <div style="width: 1px; height: 20px; background: #EBEBF0"></div>
+                    <div class="camket_space">
+                        <img src="https://salt.tikicdn.com/ts/upload/0b/f2/19/c03ae8f46956eca66845fb9aaadeca1e.png" alt="icon-1" width="20" height="20" srcset="https://salt.tikicdn.com/ts/upload/0b/f2/19/c03ae8f46956eca66845fb9aaadeca1e.png">
+                        <div class="text" style="color: gray; font-size: 15px; font-weight: 500; white-space: nowrap">Hoàn 200% nếu hàng giả</div>
+                    </div>
+                </div>
+                <div class="camket_1">
+                    <div style="width: 1px; height: 20px; background: #EBEBF0"></div>
+                    <div class="camket_space">
+                        <img src="https://salt.tikicdn.com/ts/upload/3a/f4/7d/86ca29927e9b360dcec43dccb85d2061.png" alt="icon-2" width="20" height="20" srcset="https://salt.tikicdn.com/ts/upload/3a/f4/7d/86ca29927e9b360dcec43dccb85d2061.png">
+                        <div class="text" style="color:gray;font-size:15px;font-weight:500;white-space:nowrap">30 ngày đổi trả</div>
+                    </div>
+                </div>
+                <div class="camket_1">
+                    <div style="width: 1px; height: 20px; background: #EBEBF0"></div>
+                    <div class="camket_space">
+                        <img src="https://salt.tikicdn.com/ts/upload/87/98/77/fc33e3d472fc4ce4bae8c835784b707a.png" alt="icon-3" width="20" height="20" srcset="https://salt.tikicdn.com/ts/upload/87/98/77/fc33e3d472fc4ce4bae8c835784b707a.png">
+                        <div class="text" style="color: gray; font-size: 15px; font-weight: 500; white-space: nowrap ">Giao nhanh 2h</div>
+                    </div>
+                </div>
+                <div class="camket_1">
+                    <div style="width: 1px; height: 20px; background: #EBEBF0"></div>
+                    <div class="camket_space">
+                        <img src="https://salt.tikicdn.com/ts/upload/11/09/ec/456a2a8c308c2de089a34bbfef1c757b.png" alt="icon-5" width="20" height="20" srcset="https://salt.tikicdn.com/ts/upload/11/09/ec/456a2a8c308c2de089a34bbfef1c757b.png">
+                        <div class="text" style="color: gray; font-size: 15px; font-weight: 500; white-space: nowrap">Freeship mọi đơn</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
